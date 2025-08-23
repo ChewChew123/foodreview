@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Street Food Feedback</title>
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Street Food Feedback</h2>
+  <form id="feedbackForm">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+   <label>Rating</label>
+<div class="rating">
+  <label data-value="1">★</label>
+  <label data-value="2">★</label>
+  <label data-value="3">★</label>
+  <label data-value="4">★</label>
+  <label data-value="5">★</label>
+</div>
+
+    <label for="comments">Comments</label>
+    <textarea id="comments" name="comments" placeholder="Tell us what you think..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+</div>
+
+<script src="feedback.js"></script>
+<script src="hearder-footer.js"></script>
+</body>
+</html>
