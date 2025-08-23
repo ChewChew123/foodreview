@@ -1,40 +1,39 @@
-/* Header 样式 */
+/* Header */
 .site-header {
-  background-color: #f8f8f8;
+  background-color: #eba732;
   padding: 10px 0;
-  border-bottom: 2px solid #ddd;
 }
 
 .site-title {
-  font-size: 28px;
-  margin: 0;
-  padding: 0 20px;
+  font-size: 50px;
+  margin: 100;
+  padding: 10px;
   color: #333;
 }
 
-/* 导航外框 */
+/* navigation box */
 .nav-box {
- background-color: #fff;
+ background-color: #dabf8d;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px 0;       /* 左右 margin 改成 0，这样能铺满 */
+  box-shadow: 0 4px 8px rgba(235, 232, 232, 0.1);
+  margin: 10px 0;       
   padding: 10px;
-  width: 100%;          /* 铺满可视区宽度 */
+  width: 100%;         
   box-sizing: border-box;
 }
 
 /* 导航菜单 */
 .site-nav {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .site-nav a {
   text-decoration: none;
-  font-size:0.9rem;
-  color: #333;
+  font-size: 1.5rem;
+  color: #170ce3;
   padding: 6px 10px;
   border-radius: 5px;
   transition: all 0.3s ease;
@@ -43,13 +42,13 @@
 /* 鼠标悬停效果 */
 .site-nav a:hover {
   background-color: #ff9800;
-  color: white;
+  color: rgb(74, 231, 231);
 }
 
 /* 当前页面高亮 */
 .site-nav a.active {
   background-color: #ff9800;
-  color: white;
+  color: rgb(68, 5, 62);
 }
 
 /* Footer 样式 */
