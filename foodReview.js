@@ -6,7 +6,7 @@ const defaultStreetFoods = [
         id: 1,
         name: "Char Kway Teow",
         location: "Penang Road, George Town",
-        image: "../image/istockphoto-1035944650-612x612.jpg",//https://media.istockphoto.com/id/1035944650/photo/char-kway-teow.jpg?s=612x612&w=0&k=20&c=KlrvhHrke1LXIpaBlumnl4nPxZNm2Hg5YWWkNCT_pF8=
+        image: "image/istockphoto-1035944650-612x612.jpg",//https://media.istockphoto.com/id/1035944650/photo/char-kway-teow.jpg?s=612x612&w=0&k=20&c=KlrvhHrke1LXIpaBlumnl4nPxZNm2Hg5YWWkNCT_pF8=
         description: "Char Kway Teow, a classic Malaysian street food, is flat vermicelli noodles stir-fried over high heat with shrimp, clams, and chives",
         reviews: [
             { user: "Ahmad", rating: 5, comment: "Best char kway teow in Penang! The wok hei is perfect!", time: "2 days ago" },
@@ -17,7 +17,7 @@ const defaultStreetFoods = [
     {
         id: 2,
         name: "Nasi Lemak",
-        image: "../image/istockphoto-1488263235-612x612.jpg",//https://media.istockphoto.com/id/1488263235/photo/asian-cuisine-nasi-lemak-is-a-rice-dish-infused-with-coconut-milk.jpg?s=612x612&w=0&k=20&c=bOFAGd7R3XqHrMPJ05iVT2_Yv2CqceFN12rKWec-EEk=
+        image: "image/istockphoto-1488263235-612x612.jpg",//https://media.istockphoto.com/id/1488263235/photo/asian-cuisine-nasi-lemak-is-a-rice-dish-infused-with-coconut-milk.jpg?s=612x612&w=0&k=20&c=bOFAGd7R3XqHrMPJ05iVT2_Yv2CqceFN12rKWec-EEk=
         description: "Nasi Lemak, the national dish of Malaysia, is rice cooked in rich coconut milk and served with sambal, peanuts, and cucumber.",
         reviews: [
             { user: "Fatimah", rating: 5, comment: "Authentic taste, love the sambal!", time: "1 day ago" },
@@ -29,7 +29,7 @@ const defaultStreetFoods = [
         id: 3,
         name: "Roti Canai",
         location: "Jalan Alor, Kuala Lumpur",
-        image: "../image/istockphoto-1296798691-612x612.jpg",//https:media.istockphoto.com/id/1296798691/photo/roti-parata-or-roti-canai-with-lamb-curry-sauce-popular-malaysian-breakfast.jpg?s=612x612&w=0&k=20&c=wUVGfccFRGl1xvYIKhFQB4juHjF1pPOYHht0UAiuTBU=
+        image: "image/istockphoto-1296798691-612x612.jpg",//https:media.istockphoto.com/id/1296798691/photo/roti-parata-or-roti-canai-with-lamb-curry-sauce-popular-malaysian-breakfast.jpg?s=612x612&w=0&k=20&c=wUVGfccFRGl1xvYIKhFQB4juHjF1pPOYHht0UAiuTBU=
         description: "Roti Prata with curry dipping sauce, layered pancakes paired with fragrant curry",
         reviews: [
             { user: "Muthu", rating: 5, comment: "Crispy and fluffy, excellent curry", time: "3 days ago" },
@@ -41,7 +41,7 @@ const defaultStreetFoods = [
         id: 4,
         name: "Cendol",
         location: "Jonker Street, Melaka",
-        image: "../image/istockphoto-1283335828-612x612.jpg",//https://media.istockphoto.com/id/1283335828/photo/malaysian-desserts-called-cendol-cendol-is-made-from-crushed-ice-cubes-and-a-variety-of.jpg?s=612x612&w=0&k=20&c=-TXp9RHw4L1ggRAo8lrfi3xyAvdTYcGV-HAneWATuNs=
+        image: "image/istockphoto-1283335828-612x612.jpg",//https://media.istockphoto.com/id/1283335828/photo/malaysian-desserts-called-cendol-cendol-is-made-from-crushed-ice-cubes-and-a-variety-of.jpg?s=612x612&w=0&k=20&c=-TXp9RHw4L1ggRAo8lrfi3xyAvdTYcGV-HAneWATuNs=
         description: "Cendol, a traditional Malaysian dessert, green vermicelli noodles with coconut milk and palm sugar syrup",
         reviews: [
             { user: "Lim", rating: 4, comment: "Refreshing dessert, perfect for hot weather", time: "5 days ago" },
@@ -53,7 +53,7 @@ const defaultStreetFoods = [
         id: 5,
         name: "Laksa",
         location: "Gurney Drive, Penang",
-        image: "../image/istockphoto-1310708373-612x612.jpg",//https://www.istockphoto.com/photo/assam-laksa-is-a-special-malaysian-popular-food-gm1310708373-400019440?searchscope=image%2Cfilm
+        image: "image/istockphoto-1310708373-612x612.jpg",//https://www.istockphoto.com/photo/assam-laksa-is-a-special-malaysian-popular-food-gm1310708373-400019440?searchscope=image%2Cfilm
         description: "Laksa, a spicy and sour noodle soup with rich coconut milk broth, rice noodles, and various toppings",
         reviews: [
             { user: "David", rating: 4, comment: "Spicy and tangy, authentic flavor", time: "4 days ago" },
@@ -65,7 +65,7 @@ const defaultStreetFoods = [
         id: 6,
         name: "Satay",
         location: "Kajang, Selangor",
-        image: "../image/istockphoto-527547742-612x612.jpg",//https://media.istockphoto.com/id/527547742/photo/chicken-satay-shot-from-top-down.jpg?s=612x612&w=0&k=20&c=m4c13gl_xKRSa0mAKrIpksOg8m0Ca5pcqOXd7Zh5DnE=
+        image: "image/istockphoto-527547742-612x612.jpg",//https://media.istockphoto.com/id/527547742/photo/chicken-satay-shot-from-top-down.jpg?s=612x612&w=0&k=20&c=m4c13gl_xKRSa0mAKrIpksOg8m0Ca5pcqOXd7Zh5DnE=
         description: "Satay, grilled meat skewers served with peanut sauce, cucumber, and onions",
         reviews: [
             { user: "Amir", rating: 5, comment: "Juicy and flavorful, peanut sauce is amazing", time: "1 day ago" },
@@ -77,7 +77,7 @@ const defaultStreetFoods = [
         id: 7,
         name: "Mee Goreng Mamak",
         location: "Little India, Penang",
-        image: "../image/istockphoto-1699715253-612x612.jpg",//https://media.istockphoto.com/id/1699715253/photo/spicy-asian-style-stir-fried-noodles-mee-goreng-mamak.jpg?s=612x612&w=0&k=20&c=sGcGAfL26E-3PYXK9I1j6oqopyt6wWdy0I5pMzv8z2E=
+        image: "image/istockphoto-1699715253-612x612.jpg",//https://media.istockphoto.com/id/1699715253/photo/spicy-asian-style-stir-fried-noodles-mee-goreng-mamak.jpg?s=612x612&w=0&k=20&c=sGcGAfL26E-3PYXK9I1j6oqopyt6wWdy0I5pMzv8z2E=
         description: "Malaysian fried noodles, Indian-style, savory and slightly spicy with eggs and tofu",
         reviews: [
             { user: "Farid", rating: 4, comment: "Spicy and tasty, portion is big", time: "2 days ago" },
@@ -89,7 +89,7 @@ const defaultStreetFoods = [
         id: 8,
         name: "Apam Balik",
         location: "Night Market, Ipoh",
-        image: "../image/istockphoto-2188334681-612x612.jpg",//https://media.istockphoto.com/id/2188334681/photo/traditional-malaysian-street-food-apam-balik-thick-soft-pancake-with-peanuts-bananas.jpg?s=612x612&w=0&k=20&c=V9SOWgOs-i0QcvHRUVhNYCyAdZgzabZ8jS4VPEd9WR4=
+        image: "image/istockphoto-2188334681-612x612.jpg",//https://media.istockphoto.com/id/2188334681/photo/traditional-malaysian-street-food-apam-balik-thick-soft-pancake-with-peanuts-bananas.jpg?s=612x612&w=0&k=20&c=V9SOWgOs-i0QcvHRUVhNYCyAdZgzabZ8jS4VPEd9WR4=
         description: "Malaysian pancake, sweet snack filled with crushed peanuts and corn",
         reviews: [
             { user: "Hui Min", rating: 5, comment: "Crispy outside, soft inside, love it!", time: "2 days ago" },
@@ -101,7 +101,7 @@ const defaultStreetFoods = [
         id: 9,
         name: "Teh Tarik",
         location: "Mamak Stall, Johor Bahru",
-        image: "../image/istockphoto-1441160692-612x612.jpg",//https://media.istockphoto.com/id/1441160692/photo/tea-with-milk-or-popularly-known-as-teh-tarik-in-a-mug-on-the-table.jpg?s=612x612&w=0&k=20&c=gHoeeDbLzi5w4agroCw-J4vJNv5lPwFXSJEhvntRez0=
+        image: "image/istockphoto-1441160692-612x612.jpg",//https://media.istockphoto.com/id/1441160692/photo/tea-with-milk-or-popularly-known-as-teh-tarik-in-a-mug-on-the-table.jpg?s=612x612&w=0&k=20&c=gHoeeDbLzi5w4agroCw-J4vJNv5lPwFXSJEhvntRez0=
         description: "Pulled tea, Malaysia's iconic drink, frothy and aromatic",
         reviews: [
             { user: "Nora", rating: 5, comment: "Smooth and creamy, my favorite drink!", time: "1 day ago" },
@@ -113,7 +113,7 @@ const defaultStreetFoods = [
         id: 10,
         name: "Kuih Lapis",
         location: "Traditional Market, Kuching",
-        image: "../image/istockphoto-1313082219-612x612.jpg",//https://media.istockphoto.com/id/1313082219/photo/kuih-lapis-is-a-traditional-malay-nyonya-sweet-desert.jpg?s=612x612&w=0&k=20&c=cy5r7n-K85X27yTbO__Le1Clu5bdT_s_ZuuiKPsaU6k=
+        image: "image/istockphoto-1313082219-612x612.jpg",//https://media.istockphoto.com/id/1313082219/photo/kuih-lapis-is-a-traditional-malay-nyonya-sweet-desert.jpg?s=612x612&w=0&k=20&c=cy5r7n-K85X27yTbO__Le1Clu5bdT_s_ZuuiKPsaU6k=
         description: "Layered cake, traditional Malaysian colorful steamed cake, soft and sweet",
         reviews: [
             { user: "Melissa", rating: 5, comment: "Colorful and tasty, kids love it", time: "2 days ago" },
@@ -125,7 +125,7 @@ const defaultStreetFoods = [
         id: 21,
         name: "Kolo Mee",
         location: "Kuching, Sarawak",
-        image: "../image/istockphoto-2075066984-612x612.jpg",//https://media.istockphoto.com/id/2075066984/photo/stir-fried-dry-wanton-noodle-mee-with-meat-dumpling-in-plate-on-dark-grey-wood-table-asian.jpg?s=612x612&w=0&k=20&c=W9-ODZ4oMg3pBTKf0gk6mijukKlKdoQb7eHPFf1suIE=
+        image: "image/istockphoto-2075066984-612x612.jpg",//https://media.istockphoto.com/id/2075066984/photo/stir-fried-dry-wanton-noodle-mee-with-meat-dumpling-in-plate-on-dark-grey-wood-table-asian.jpg?s=612x612&w=0&k=20&c=W9-ODZ4oMg3pBTKf0gk6mijukKlKdoQb7eHPFf1suIE=
         description: "Kolo Mee, Sarawak specialty dry noodles with char siu and scallion oil",
         reviews: [
             { user: "Wei Ling", rating: 5, comment: "Authentic Sarawak taste!", time: "2 days ago" },
@@ -136,7 +136,7 @@ const defaultStreetFoods = [
         id: 22,
         name: "Ulam with Sambal Belacan",
         location: "Kampung Baru, Kuala Lumpur",
-        image: "../image/istockphoto-1177037197-612x612.jpg",//https://media.istockphoto.com/id/1177037197/photo/laksa-johor-popular-malay-noodle-with-ulam-and-sambal-belacan.jpg?s=612x612&w=0&k=20&c=63ga6yl1EdTVhHasTpvol2VcY11cIJ6li5flYCPcvDM=
+        image: "image/istockphoto-1177037197-612x612.jpg",//https://media.istockphoto.com/id/1177037197/photo/laksa-johor-popular-malay-noodle-with-ulam-and-sambal-belacan.jpg?s=612x612&w=0&k=20&c=63ga6yl1EdTVhHasTpvol2VcY11cIJ6li5flYCPcvDM=
         description: "Malay traditional salad with shrimp paste chili sauce",
         reviews: [
             { user: "Farah", rating: 4, comment: "Very fresh vegetables!", time: "3 days ago" },
@@ -147,7 +147,7 @@ const defaultStreetFoods = [
         id: 23,
         name: "Kaya Toast",
         location: "Kopitiam, Ipoh",
-        image: "../image/istockphoto-1402975138-612x612.jpg",//https://media.istockphoto.com/id/1402975138/photo/breakfast-set-with-toast-bread-half-boiled-eggs-and-coffee.jpg?s=612x612&w=0&k=20&c=3w0FOk6l-INrVbaD00LUFfZyQ0kM7-OtXedo3I7STAY=
+        image: "image/istockphoto-1402975138-612x612.jpg",//https://media.istockphoto.com/id/1402975138/photo/breakfast-set-with-toast-bread-half-boiled-eggs-and-coffee.jpg?s=612x612&w=0&k=20&c=3w0FOk6l-INrVbaD00LUFfZyQ0kM7-OtXedo3I7STAY=
         description: "Kaya toast, toasted bread with coconut jam and butter, classic breakfast",
         reviews: [
             { user: "Mei", rating: 5, comment: "Best with kopi!", time: "2 days ago" },
@@ -158,7 +158,7 @@ const defaultStreetFoods = [
         id: 24,
         name: "Pulut Panggang",
         location: "Terengganu Night Market",
-        image: "../image/istockphoto-1470005512-612x612.jpg",//https://media.istockphoto.com/id/1470005512/photo/a-close-up-of-lontong-traditional-food-from-indonesia-originating-from-rice-filled-with.jpg?s=612x612&w=0&k=20&c=9p9MG8-xI-JSvOrlfdShDc_lizP9loSE37ygH7PLdk4=
+        image: "image/istockphoto-1470005512-612x612.jpg",//https://media.istockphoto.com/id/1470005512/photo/a-close-up-of-lontong-traditional-food-from-indonesia-originating-from-rice-filled-with.jpg?s=612x612&w=0&k=20&c=9p9MG8-xI-JSvOrlfdShDc_lizP9loSE37ygH7PLdk4=
         description: "Grilled glutinous rice rolls, filled with coconut or fish, wrapped in banana leaves and grilled",
         reviews: [
             { user: "Azlan", rating: 4, comment: "Fragrant banana leaf aroma!", time: "1 week ago" },
@@ -169,7 +169,7 @@ const defaultStreetFoods = [
         id: 25,
         name: "Mee Rebus",
         location: "Johor Bahru",
-        image: "../image/istockphoto-480739881-612x612.jpg",//https://media.istockphoto.com/id/480739881/photo/mee-rebus-spicy-noodle-table-set.jpg?s=612x612&w=0&k=20&c=PcGvga8ntmEAAMP_E5EwPb4PXNUbWp9t96TLBIQOJL8=
+        image: "image/istockphoto-480739881-612x612.jpg",//https://media.istockphoto.com/id/480739881/photo/mee-rebus-spicy-noodle-table-set.jpg?s=612x612&w=0&k=20&c=PcGvga8ntmEAAMP_E5EwPb4PXNUbWp9t96TLBIQOJL8=
         description: "Malay-style yellow noodles with thick potato peanut gravy",
         reviews: [
             { user: "Rahman", rating: 5, comment: "Rich and flavorful sauce", time: "4 days ago" },
@@ -180,7 +180,7 @@ const defaultStreetFoods = [
         id: 26,
         name: "Kacang Pool",
         location: "Johor Bahru",
-        image: "../image/istockphoto-1130968926-612x612.jpg",//https://media.istockphoto.com/id/1130968926/photo/specially-made-toasted-bread-with-bean-sauce-served-with-egg-popular-in-state-of-johor-in.jpg?s=612x612&w=0&k=20&c=rjtwE2nglRzt9K0iXiu2qXvExXcH0pGfXFSKLBedckw=
+        image: "image/istockphoto-1130968926-612x612.jpg",//https://media.istockphoto.com/id/1130968926/photo/specially-made-toasted-bread-with-bean-sauce-served-with-egg-popular-in-state-of-johor-in.jpg?s=612x612&w=0&k=20&c=rjtwE2nglRzt9K0iXiu2qXvExXcH0pGfXFSKLBedckw=
         description: "Johor specialty, broad bean sauce with half-boiled eggs and bread",
         reviews: [
             { user: "Nadia", rating: 5, comment: "So hearty and filling!", time: "3 days ago" },
@@ -191,7 +191,7 @@ const defaultStreetFoods = [
         id: 27,
         name: "Rojak Penang",
         location: "Gurney Drive, Penang",
-        image: "../image/istockphoto-1154410694-612x612.jpg",//https://media.istockphoto.com/id/1154410694/photo/popular-penang-fruit-rojak-served-with-prawn-paste-and-groundnuts.jpg?s=612x612&w=0&k=20&c=WnW0aIiFZ-UX4yAy0_V0QHVZAim9wrq_8CSGAk_kgRo=
+        image: "image/istockphoto-1154410694-612x612.jpg",//https://media.istockphoto.com/id/1154410694/photo/popular-penang-fruit-rojak-served-with-prawn-paste-and-groundnuts.jpg?s=612x612&w=0&k=20&c=WnW0aIiFZ-UX4yAy0_V0QHVZAim9wrq_8CSGAk_kgRo=
         description: "Penang rojak, fruits and vegetables mixed with shrimp paste sauce, sweet, sour and spicy",
         reviews: [
             { user: "Ling", rating: 5, comment: "Best balance of flavors!", time: "2 days ago" },
@@ -202,7 +202,7 @@ const defaultStreetFoods = [
         id: 28,
         name: "Prawn Noodles",
         location: "Penang",
-        image: "../image/istockphoto-1471563658-612x612.jpg",//https://media.istockphoto.com/id/1471563658/photo/famous-prawn-mee.jpg?s=612x612&w=0&k=20&c=6xJfWnQ1gBuBhlzwl2p80s-M94OMk1GO1Qp8SV345j0=
+        image: "image/istockphoto-1471563658-612x612.jpg",//https://media.istockphoto.com/id/1471563658/photo/famous-prawn-mee.jpg?s=612x612&w=0&k=20&c=6xJfWnQ1gBuBhlzwl2p80s-M94OMk1GO1Qp8SV345j0=
         description: "Layered cake, colorful traditional Malay dessert with chewy texture",
         reviews: [
             { user: "Alice", rating: 5, comment: "So pretty and tasty!", time: "1 day ago" },
@@ -213,7 +213,7 @@ const defaultStreetFoods = [
         id: 29,
         name: "Ayam Penyet",
         location: "Shah Alam",
-        image: "../image/istockphoto-505893758-612x612.jpg",//https://media.istockphoto.com/id/505893758/photo/rice-penyet-chicken-indonesian-fried-chicken-rice.jpg?s=612x612&w=0&k=20&c=7lcP7bU-JVulTgy11tl_BB6RPQqP1Ys7pgaTjQ5Nl8Q=
+        image: "image/istockphoto-505893758-612x612.jpg",//https://media.istockphoto.com/id/505893758/photo/rice-penyet-chicken-indonesian-fried-chicken-rice.jpg?s=612x612&w=0&k=20&c=7lcP7bU-JVulTgy11tl_BB6RPQqP1Ys7pgaTjQ5Nl8Q=
         description: "Indonesian-style fried chicken with chili sauce and rice, crispy outside and tender inside",
         reviews: [
             { user: "Firdaus", rating: 5, comment: "Crispy and spicy, perfect combo!", time: "3 days ago" },
@@ -224,7 +224,7 @@ const defaultStreetFoods = [
         id: 30,
         name: "Spring Rolls",
         location: "Night Market, Malaysia",
-        image: "../image/istockphoto-860900100-612x612.jpg",//https://media.istockphoto.com/id/860900100/photo/teochew-popiah-the-chinese-fresh-vegetable-spring-roll-on-wooden-serving-block.jpg?s=612x612&w=0&k=20&c=2Ow6rjtTeN33yGlo8RWD6XOBu6Sdeukjbzh5C5AIln4=
+        image: "image/istockphoto-860900100-612x612.jpg",//https://media.istockphoto.com/id/860900100/photo/teochew-popiah-the-chinese-fresh-vegetable-spring-roll-on-wooden-serving-block.jpg?s=612x612&w=0&k=20&c=2Ow6rjtTeN33yGlo8RWD6XOBu6Sdeukjbzh5C5AIln4=
         description: "Malaysian pancake, sweet dessert with crushed peanuts, corn and sugar",
         reviews: [
             { user: "Daniel", rating: 5, comment: "Crispy edges, soft inside", time: "2 days ago" },
@@ -235,7 +235,7 @@ const defaultStreetFoods = [
         id: 31,
         name: "Satay Celup",
         location: "Ipoh,night-market",
-        image: "../image/istockphoto-1082846460-612x612.jpg",//https://media.istockphoto.com/id/1082846460/photo/satay-celup-or-lok-lok-traditional-malaysian-meal-cooking-process-steamed-round-wooden-bowl.jpg?s=612x612&w=0&k=20&c=B6XLsdfrr7IdPZpji0SGkdn1IfhuZzx73fJBuuKJyMw=
+        image: "image/istockphoto-1082846460-612x612.jpg",//https://media.istockphoto.com/id/1082846460/photo/satay-celup-or-lok-lok-traditional-malaysian-meal-cooking-process-steamed-round-wooden-bowl.jpg?s=612x612&w=0&k=20&c=B6XLsdfrr7IdPZpji0SGkdn1IfhuZzx73fJBuuKJyMw=
         description: "Skewered meats and vegetables dipped in satay peanut sauce hotpot",
         reviews: [
             { user: "Kevin", rating: 5, comment: "Unique Melaka specialty!", time: "2 days ago" },
@@ -246,7 +246,7 @@ const defaultStreetFoods = [
         id: 32,
         name: " Clay Pot Chicken Rice",
         location: "Penang",
-        image: "../image/istockphoto-1651891983-612x612.jpg",//https://media.istockphoto.com/id/1651891983/photo/steamed-sparerib-rice-in-claypot.jpg?s=612x612&w=0&k=20&c=o0qOnDAZNP-SsPVuMFfOhQSxSn6Ef3b-lreDuUgt8k0=
+        image: "image/istockphoto-1651891983-612x612.jpg",//https://media.istockphoto.com/id/1651891983/photo/steamed-sparerib-rice-in-claypot.jpg?s=612x612&w=0&k=20&c=o0qOnDAZNP-SsPVuMFfOhQSxSn6Ef3b-lreDuUgt8k0=
         description: "Fried yellow noodles with eggs, potatoes, tofu and special sauce",
         reviews: [
             { user: "Raj", rating: 5, comment: "Flavorful!", time: "3 days ago" },
@@ -257,7 +257,7 @@ const defaultStreetFoods = [
         id: 33,
         name: "Steamed Rice Flour Cake",
         location: "Brickfields, KL",
-        image: "../image/istockphoto-1438136062-612x612.jpg",//https://media.istockphoto.com/id/1438136062/photo/thai-steamed-cupcakes-khanom-pui-fai.jpg?s=612x612&w=0&k=20&c=rDTpKXNoVDCFcxMd0RDVW0rsfI-MrlcLEUdb_AMizE4=
+        image: "image/istockphoto-1438136062-612x612.jpg",//https://media.istockphoto.com/id/1438136062/photo/thai-steamed-cupcakes-khanom-pui-fai.jpg?s=612x612&w=0&k=20&c=rDTpKXNoVDCFcxMd0RDVW0rsfI-MrlcLEUdb_AMizE4=
         description: "A Chinese tradisional Food",
         reviews: [
             { user: "Suresh", rating: 5, comment: "Authentic South Indian vibes!", time: "2 days ago" },
@@ -268,7 +268,7 @@ const defaultStreetFoods = [
         id: 34,
         name: "Roti John",
         location: "Johor Bahru",
-        image: "../image/istockphoto-1091015204-612x612.jpg",//https://media.istockphoto.com/id/1091015204/photo/malaysian-roti-john-stuffed-sandwich.jpg?s=612x612&w=0&k=20&c=8YAcEraYwA24L1UZ0ivV2kVA55ewPhqc8f8E0BjYUhY=
+        image: "image/istockphoto-1091015204-612x612.jpg",//https://media.istockphoto.com/id/1091015204/photo/malaysian-roti-john-stuffed-sandwich.jpg?s=612x612&w=0&k=20&c=8YAcEraYwA24L1UZ0ivV2kVA55ewPhqc8f8E0BjYUhY=
         description: "Malaysian-style long bread, fried with eggs, meat filling and sauce",
         reviews: [
             { user: "Farid", rating: 5, comment: "Big portion, very filling!", time: "4 days ago" },
@@ -279,7 +279,7 @@ const defaultStreetFoods = [
         id: 35,
         name: "Ikan Bakar",
         location: "Port Dickson",
-        image: "../image/istockphoto-2199487832-612x612.jpg",//https://media.istockphoto.com/id/2199487832/photo/ikan-bakar-is-a-popular-malaysian-dish.jpg?s=612x612&w=0&k=20&c=r95qUaHhRfuRMIdV7pAFQDPffhG1qSTV4bNaJ-Xvtw0=
+        image: "image/istockphoto-2199487832-612x612.jpg",//https://media.istockphoto.com/id/2199487832/photo/ikan-bakar-is-a-popular-malaysian-dish.jpg?s=612x612&w=0&k=20&c=r95qUaHhRfuRMIdV7pAFQDPffhG1qSTV4bNaJ-Xvtw0=
         description: "Grilled fish, usually wrapped in banana leaves and coated with spicy sauce",
         reviews: [
             { user: "Amir", rating: 5, comment: "So smoky and spicy!", time: "2 days ago" },
@@ -290,7 +290,7 @@ const defaultStreetFoods = [
         id: 36,
         name: "Nasi Dagang",
         location: "Terengganu",
-        image: "../image/istockphoto-1201106611-612x612.jpg",//https://media.istockphoto.com/id/1201106611/photo/nasi-dagang-a-popular-malaysian-meal-on-the-east-coast-of-the-malaysian-peninsular.jpg?s=612x612&w=0&k=20&c=bJTD1-SKifOKe4peoRNTgtKp2tHS4J44HxmaM3o9qZI=
+        image: "image/istockphoto-1201106611-612x612.jpg",//https://media.istockphoto.com/id/1201106611/photo/nasi-dagang-a-popular-malaysian-meal-on-the-east-coast-of-the-malaysian-peninsular.jpg?s=612x612&w=0&k=20&c=bJTD1-SKifOKe4peoRNTgtKp2tHS4J44HxmaM3o9qZI=
         description: "Steamed coconut rice with fish curry, traditional breakfast in Terengganu and Kelantan",
         reviews: [
             { user: "Hakim", rating: 5, comment: "Very fragrant rice!", time: "3 days ago" },
@@ -301,7 +301,7 @@ const defaultStreetFoods = [
         id: 37,
         name: "Pisang Goreng",
         location: "Night Market",
-        image: "../image/istockphoto-628659258-612x612.jpg",//https://media.istockphoto.com/id/628659258/photo/pisang-goreng-fried-bananas-in-batter-on-plate-macro-horizontal.jpg?s=612x612&w=0&k=20&c=UQyfZc6XCDNs9WtJOlvceSNBoPi_jGUIJkVX5vPSuls=
+        image: "image/istockphoto-628659258-612x612.jpg",//https://media.istockphoto.com/id/628659258/photo/pisang-goreng-fried-bananas-in-batter-on-plate-macro-horizontal.jpg?s=612x612&w=0&k=20&c=UQyfZc6XCDNs9WtJOlvceSNBoPi_jGUIJkVX5vPSuls=
         description: "Fried banana, crispy outside and soft inside, one of the most popular street snacks",
         reviews: [
             { user: "Ling", rating: 5, comment: "Hot and crispy, so good!", time: "1 day ago" },
@@ -312,7 +312,7 @@ const defaultStreetFoods = [
         id: 38,
         name: "Keropok Lekor",
         location: "Night-market",
-        image:"../image/istockphoto-896625906-612x612.jpg",//https://media.istockphoto.com/id/896625906/photo/keropok-lekor-isolated-on-wooden-background.jpg?s=612x612&w=0&k=20&c=LYSXHq0D5WWKaFNs52mX8wSMFUaxB-fMT6hc4OGdXAU=
+        image:"image/istockphoto-896625906-612x612.jpg",//https://media.istockphoto.com/id/896625906/photo/keropok-lekor-isolated-on-wooden-background.jpg?s=612x612&w=0&k=20&c=LYSXHq0D5WWKaFNs52mX8wSMFUaxB-fMT6hc4OGdXAU=
         description: "Pulled tea, rich milk tea poured from height to create foam",
         reviews: [
             { user: "Arun", rating: 5, comment: "Foamy and sweet, perfect!", time: "2 days ago" },
@@ -323,7 +323,7 @@ const defaultStreetFoods = [
         id: 39,
         name: "Laksa Johor",
         location: "Johor",
-        image: "../image/istockphoto-2191416048-612x612.jpg",//https://media.istockphoto.com/id/2191416048/photo/a-bowl-of-laksa-johor.jpg?s=612x612&w=0&k=20&c=Ky35TviV23G4aV0VoHxqJ79p2pf9PvAdIRTxx-E5PTo=
+        image: "image/istockphoto-2191416048-612x612.jpg",//https://media.istockphoto.com/id/2191416048/photo/a-bowl-of-laksa-johor.jpg?s=612x612&w=0&k=20&c=Ky35TviV23G4aV0VoHxqJ79p2pf9PvAdIRTxx-E5PTo=
         description: "Unique Johor laksa, uses spaghetti instead of rice noodles with rich fish broth",
         reviews: [
             { user: "Amin", rating: 5, comment: "So unique compared to other laksa!", time: "3 days ago" },
@@ -334,7 +334,7 @@ const defaultStreetFoods = [
         id: 40,
         name: "Hokkien Mee",
         location: "Ipoh",
-        image: "../image/istockphoto-1277076119-612x612.jpg",//https://media.istockphoto.com/id/1277076119/photo/steamy-fried-hokkien-mee-on-table-ready-to-eat.jpg?s=612x612&w=0&k=20&c=n5S48OH8HvM7TB7SFflAkzHlzyEqdObqCMKwMCFEdbc=
+        image: "image/istockphoto-1277076119-612x612.jpg",//https://media.istockphoto.com/id/1277076119/photo/steamy-fried-hokkien-mee-on-table-ready-to-eat.jpg?s=612x612&w=0&k=20&c=n5S48OH8HvM7TB7SFflAkzHlzyEqdObqCMKwMCFEdbc=
         description: "Green bean noodles, coconut milk, palm sugar syrup and shaved ice refreshing dessert",
         reviews: [
             { user: "James", rating: 5, comment: "Refreshing in hot weather!", time: "2 days ago" },
@@ -345,7 +345,7 @@ const defaultStreetFoods = [
         id: 41,
         name: "Nasi Lemak Kukus",
         location: "Cheras, KL",
-        image: "../image/istockphoto-1135962086-612x612.jpg",//https://media.istockphoto.com/id/1135962086/photo/fried-tilapia-fish-and-rice.jpg?s=612x612&w=0&k=20&c=DSo1XbAccRZPvX8eAKF0DshbxmLr4Y96FUSDa12qP04=
+        image: "image/istockphoto-1135962086-612x612.jpg",//https://media.istockphoto.com/id/1135962086/photo/fried-tilapia-fish-and-rice.jpg?s=612x612&w=0&k=20&c=DSo1XbAccRZPvX8eAKF0DshbxmLr4Y96FUSDa12qP04=
         description: "Steamed instead of boiled rice, fluffier texture, served with sambal chili sauce",
         reviews: [
             { user: "Adam", rating: 5, comment: "Fluffy rice and spicy sambal!", time: "2 days ago" },
@@ -356,7 +356,7 @@ const defaultStreetFoods = [
         id: 42,
         name: "Homemade Nasi Tim Ayam Jamur ",
         location: "Ipoh",
-        image: "../image/istockphoto-1335554418-612x612.jpg",//https://media.istockphoto.com/id/1335554418/photo/homemade-nasi-tim-ayam-jamur-with-soy-sauce-and-boiled-egg-served-with-cracker-and-sambal.jpg?s=612x612&w=0&k=20&c=B5Dx31sZd4CZMmPnszmoWOBkwONxBwbEfVKIcbOoWVQ=
+        image: "image/istockphoto-1335554418-612x612.jpg",//https://media.istockphoto.com/id/1335554418/photo/homemade-nasi-tim-ayam-jamur-with-soy-sauce-and-boiled-egg-served-with-cracker-and-sambal.jpg?s=612x612&w=0&k=20&c=B5Dx31sZd4CZMmPnszmoWOBkwONxBwbEfVKIcbOoWVQ=
         description: "Fried radish cake with dark soy sauce, eggs, bean sprouts and preserved vegetables",
         reviews: [
             { user: "Tan", rating: 5, comment: "Crispy edges and savory taste!", time: "3 days ago" },
@@ -367,7 +367,7 @@ const defaultStreetFoods = [
         id: 43,
         name: "Ang Ku Kueh",
         location: "Ipoh",
-        image: "../image/istockphoto-1311901852-612x612.jpg",//https://media.istockphoto.com/id/1311901852/photo/kuih-angku.jpg?s=612x612&w=0&k=20&c=w1r8_E2WDkRVDJjYx_63epi_YKY_0IfB_MlyvqSTdjs=
+        image: "image/istockphoto-1311901852-612x612.jpg",//https://media.istockphoto.com/id/1311901852/photo/kuih-angku.jpg?s=612x612&w=0&k=20&c=w1r8_E2WDkRVDJjYx_63epi_YKY_0IfB_MlyvqSTdjs=
         description: "Red tortoise cake is a small round or oval-shaped Chinese sweet dumpling with soft, sticky glutinous rice flour skin wrapped around a sweet central filling.",
         reviews: [
             { user: "Ali", rating: 5, comment: "Sweet and savory gravy!", time: "1 day ago" },
@@ -378,7 +378,7 @@ const defaultStreetFoods = [
         id: 44,
         name: "Sliced Chicken Noodle Soup",
         location: "Kopitiam",
-        image: "../image/istockphoto-810747360-612x612.jpg",//https://media.istockphoto.com/id/810747360/photo/close-up-on-popular-delicious-malaysia-ipoh-sliced-chicken-noodle-soup.jpg?s=612x612&w=0&k=20&c=I3f9-lBdJRY2GOSk-c5qQqvwLGlgCDxNAbjsQC2_4GM=
+        image: "image/istockphoto-810747360-612x612.jpg",//https://media.istockphoto.com/id/810747360/photo/close-up-on-popular-delicious-malaysia-ipoh-sliced-chicken-noodle-soup.jpg?s=612x612&w=0&k=20&c=I3f9-lBdJRY2GOSk-c5qQqvwLGlgCDxNAbjsQC2_4GM=
         description: "Yee Mee noodles with eggs, vegetables and special soup",
         reviews: [
             { user: "Danial", rating: 5, comment: "Comfort food anytime!", time: "2 days ago" },
@@ -389,7 +389,7 @@ const defaultStreetFoods = [
         id: 45,
         name: "Claypot Noodles",
         location: "Kopitiam",
-        image: "../image/istockphoto-1305946388-612x612.jpg",//https://media.istockphoto.com/id/1305946388/photo/restaurant-situation.jpg?s=612x612&w=0&k=20&c=J2HrWjaIcpRVTAPMg-aj8kvmKsxTrXmDKZryGzHcppI=
+        image: "image/istockphoto-1305946388-612x612.jpg",//https://media.istockphoto.com/id/1305946388/photo/restaurant-situation.jpg?s=612x612&w=0&k=20&c=J2HrWjaIcpRVTAPMg-aj8kvmKsxTrXmDKZryGzHcppI=
         description: "Claypo noodles. the asia food",
         reviews: [
             { user: "Grace", rating: 5, comment: "Since I have a big bag of yee mee (yi mein/伊面 aka Cantonese egg noodles), I have been making several versions of claypot noodles for lunch.", time: "3 days ago" },
@@ -400,7 +400,7 @@ const defaultStreetFoods = [
         id: 46,
         name: "Nasi Kerabu",
         location: "Kelantan",
-        image: "../image/istockphoto-1312743970-612x612.jpg",//https://media.istockphoto.com/id/179065177/photo/nasi-kerabu-or-ulam.jpg?s=612x612&w=0&k=20&c=p-qnOBKP-AgqoHYYGTmZkHhDPxDGau2NdZDmugZDhdk=
+        image: "image/istockphoto-1312743970-612x612.jpg",//https://media.istockphoto.com/id/179065177/photo/nasi-kerabu-or-ulam.jpg?s=612x612&w=0&k=20&c=p-qnOBKP-AgqoHYYGTmZkHhDPxDGau2NdZDmugZDhdk=
         description: "Blue flower rice with herbs, fried chicken and fish sauce",
         reviews: [
             { user: "Zul", rating: 5, comment: "So colorful and tasty!", time: "2 days ago" },
@@ -411,7 +411,7 @@ const defaultStreetFoods = [
         id: 47,
         name: "Sup Kambing",
         location: "Mamak Stall",
-        image: "../image/istockphoto-1058109932-612x612.jpg",//https://media.istockphoto.com/id/1058109932/photo/soup.jpg?s=612x612&w=0&k=20&c=jtN6t3AntQzcn_nrCqyXGK9liZXdunKCRhkukFpWx8E=
+        image: "image/istockphoto-1058109932-612x612.jpg",//https://media.istockphoto.com/id/1058109932/photo/soup.jpg?s=612x612&w=0&k=20&c=jtN6t3AntQzcn_nrCqyXGK9liZXdunKCRhkukFpWx8E=
         description: "Fragrant mutton soup with spices and fried shallots",
         reviews: [
             { user: "Hafiz", rating: 5, comment: "Warm and hearty!", time: "1 day ago" },
@@ -422,7 +422,7 @@ const defaultStreetFoods = [
         id: 48,
         name: "Tau Fu Fah",
         location: "Ipoh",
-        image: "../image/istockphoto-2165980003-612x612.jpg",//https://media.istockphoto.com/id/2165980003/photo/tau-fu-fah-a-desert-made-with-soy-product-and-caramel.jpg?s=612x612&w=0&k=20&c=ln9w_ooHScL-9OYY4vANDgXYKkzUia3h0VIy2Zi96I8=
+        image: "image/istockphoto-2165980003-612x612.jpg",//https://media.istockphoto.com/id/2165980003/photo/tau-fu-fah-a-desert-made-with-soy-product-and-caramel.jpg?s=612x612&w=0&k=20&c=ln9w_ooHScL-9OYY4vANDgXYKkzUia3h0VIy2Zi96I8=
         description: "Soft tofu pudding with brown sugar or ginger syrup",
         reviews: [
             { user: "Chee", rating: 5, comment: "Super silky texture!", time: "3 days ago" },
@@ -433,7 +433,7 @@ const defaultStreetFoods = [
         id: 49,
         name: "Bak kut teh",
         location: "Ipoh",
-        image: "../image/istockphoto-1304718341-612x612.jpg",//https://media.istockphoto.com/id/1304718341/photo/close-up-bak-kut-teh-or-chinese-malaysian-broth-in-clay-pot.jpg?s=612x612&w=0&k=20&c=EOAM-SNv94Rkp0FwZTrTKXjTsJte_DHKyVc8yohzarQ=
+        image: "image/istockphoto-1304718341-612x612.jpg",//https://media.istockphoto.com/id/1304718341/photo/close-up-bak-kut-teh-or-chinese-malaysian-broth-in-clay-pot.jpg?s=612x612&w=0&k=20&c=EOAM-SNv94Rkp0FwZTrTKXjTsJte_DHKyVc8yohzarQ=
         description: "Is a pork rib dish cooked in broth popularly served in Malaysia",
         reviews: [
             { user: "Yen", rating: 5, comment: "Good taste for soup!", time: "2 days ago" },
@@ -444,7 +444,7 @@ const defaultStreetFoods = [
         id: 50,
         name: "Rojak Pasembur",
         location: "Penang",
-        image: "../image/istockphoto-2182789176-612x612.jpg",//https://media.istockphoto.com/id/2182789176/photo/rojak-pasembur-a-popular-cuisine-in-malaysia.jpg?s=612x612&w=0&k=20&c=y2SwWgfcfUFC048SiDCwoUm5hDt3d4dCZrRVE-w4gMw=
+        image: "image/istockphoto-2182789176-612x612.jpg",//https://media.istockphoto.com/id/2182789176/photo/rojak-pasembur-a-popular-cuisine-in-malaysia.jpg?s=612x612&w=0&k=20&c=y2SwWgfcfUFC048SiDCwoUm5hDt3d4dCZrRVE-w4gMw=
         description: "Malaysian-style salad with fried items, vegetables and peanut sauce",
         reviews: [
             { user: "Mani", rating: 5, comment: "So many textures!", time: "1 day ago" },
