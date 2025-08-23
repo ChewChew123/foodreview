@@ -1,3 +1,23 @@
+// Force clear potentially existing old localStorage data
+function forceCleanOldData() {
+    const storageKeys = ['malaysiStreetFoods', 'streetFoods', 'malaysianFoodData']; // Possible key names
+    
+    storageKeys.forEach(key => {
+        if (localStorage.getItem(key)) {
+            console.log(`Found old data, clearing localStorage key: ${key}`);
+            localStorage.removeItem(key);
+        }
+    });
+    
+    // You can also completely clear localStorage (if you're sure there's no other important data)
+    // localStorage.clear();
+    
+    console.log('Old data cleanup completed');
+}
+
+// Execute cleanup immediately when page loads
+forceCleanOldData();
+
 // Street food data (automatically saved to localStorage)
 let streetFoods = [];
 // Default data
