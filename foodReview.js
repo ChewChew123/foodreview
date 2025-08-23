@@ -414,7 +414,7 @@ const defaultStreetFoods = [
         image: "image/istockphoto-1058109932-612x612.jpg",//https://media.istockphoto.com/id/1058109932/photo/soup.jpg?s=612x612&w=0&k=20&c=jtN6t3AntQzcn_nrCqyXGK9liZXdunKCRhkukFpWx8E=
         description: "Fragrant mutton soup with spices and fried shallots",
         reviews: [
-            { user: "Hafiz", rating: 5, comment: "Warm and hearty!", time: "1 day ago" },
+            { user: "Hafiz", rating: 5, comment: "Warm and hearty!", time: "3 day ago" },
             { user: "Nora", rating: 4, comment: "Strong mutton taste", time: "1 week ago" }
         ]
     },
@@ -498,6 +498,7 @@ function loadFromLocalStorage() {
                 });
                 
                 streetFoods = mergedFoods;
+                console.log(saveToLocalStorage);
                 saveToLocalStorage(); // Save merged data
                 return true;
             }
@@ -507,6 +508,8 @@ function loadFromLocalStorage() {
     }
     return false;
 }
+
+
 
 function resetToDefault() {
     streetFoods = JSON.parse(JSON.stringify(defaultStreetFoods));
