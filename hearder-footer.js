@@ -71,19 +71,20 @@ function insertFooter() {
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-content">
+                    Click the IG Twitter Facebook if you want to know more !
                     <div class="social-media">
-                        <a href="https://instagram.com/streetfoodmy" class="social-link instagram" target="_blank" aria-label="Instagram">
-                            📷
+                       <a href="https://www.instagram.com/malaysia_street_food?igsh=azdneWN3ZGZzb2Vz target="_blank" aria-label="Instagram">
+                          <img src="image/com-instagram-android-icon-360x360.png.webp" alt="Instagram" class="social-icon">
                         </a>
-                        <a href="https://twitter.com/streetfoodmy" class="social-link twitter" target="_blank" aria-label="Twitter">
-                            🐦
+                        <a href="https://twitter.com/streetfoodmy" target="_blank" aria-label="Twitter">
+                          <img src="image/new-2023-twitter-logo-x-icon-design_1017-45418.avif" alt="Twitter" class="social-icon">
                         </a>
-                        <a href="https://facebook.com/streetfoodmy" class="social-link facebook" target="_blank" aria-label="Facebook">
-                            📘
+                        <a href="https://www.facebook.com/p/The-Street-Food-Malaysia-100063670836214/?utm_source=chatgpt.com" target="_blank" aria-label="Facebook">
+                          <img src="image/download.png" alt="Facebook" class="social-icon">
                         </a>
                     </div>
                     <div class="copyright">
-                        <p>&copy; ${currentYear} Street Food MY. All rights reserved.</p>
+                        <p class="f-p">&copy; ${currentYear} Street Food MY. All rights reserved.</p>
                         <p>Follow us on social media for the latest updates! 🍴✨</p>
                     </div>
                 </div>

@@ -333,10 +333,11 @@ const defaultStreetFoods = [
         name: "Keropok Lekor",
         location: "Night-market",
         image:"image/istockphoto-896625906-612x612.jpg",//https://media.istockphoto.com/id/896625906/photo/keropok-lekor-isolated-on-wooden-background.jpg?s=612x612&w=0&k=20&c=LYSXHq0D5WWKaFNs52mX8wSMFUaxB-fMT6hc4OGdXAU=
-        description: "Pulled tea, rich milk tea poured from height to create foam",
+        description: "Keropok Lekor, a famous Terengganu fish sausage snack, deep-fried until crispy on the outside and chewy inside.",
         reviews: [
-            { user: "Arun", rating: 5, comment: "Foamy and sweet, perfect!", time: "2 days ago" },
-            { user: "Mei", rating: 4, comment: "A bit sweet but iconic", time: "6 days ago" }
+             { user: "Hafiz", rating: 5, comment: "So crispy and chewy, the best snack!", time: "2 days ago" },
+        { user: "Aminah", rating: 4, comment: "Tasty but a little oily", time: "5 days ago" },
+        { user: "Tan", rating: 5, comment: "Brings back childhood memories, love it!", time: "1 week ago" }
         ]
     },
     {

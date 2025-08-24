@@ -207,8 +207,7 @@ body {
 
 /* Footer 样式 */
 .site-footer {
-    background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-    color: white;
+    background: linear-gradient(135deg, #92b0e2 0%, #ec63dc 100%);
     text-align: center;
     padding: 40px 0 20px;
     margin-top: 40px;
@@ -223,7 +222,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: repeating-conic-gradient(from 0deg, transparent 0deg, rgba(255, 255, 255, 0.03) 1deg, transparent 2deg);
+    background: repeating-conic-gradient(from 0deg, transparent 0deg, rgba(4, 32, 242, 0.03) 1deg, transparent 2deg);
     animation: rotate 20s linear infinite;
 }
 
@@ -235,6 +234,8 @@ body {
 .footer-content {
     position: relative;
     z-index: 2;
+    color: #1a1a6e;
+    font-weight:bold ;
 }
 
 .social-media {
@@ -245,44 +246,25 @@ body {
     flex-wrap: wrap;
 }
 
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+.social-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  border-radius: 15px;
 }
-
-.social-link:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
-}
-
-.social-link.instagram:hover {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-.social-link.facebook:hover {
-    background: #1877f2;
-}
-
-.social-link.twitter:hover {
-    background: #1da1f2;
+.social-icon:hover {
+  transform: scale(1.2);
 }
 
 .copyright {
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(10, 8, 8, 0.2);
     font-size: 0.9rem;
+    font-weight: bold;
     opacity: 0.8;
+    color: #0a0154;
 }
 
 /* 响应式设计 */
