@@ -6,31 +6,33 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ec7113 0%, #764ba2 100%);
+     background: linear-gradient(135deg, #d8edf5 0%, #c3cfe2 100%);
     min-height: 100vh;
     padding: 20px;
 }
 
 .container {
-    max-width: 12000px;
-    margin: 0 auto;
+   max-width: 1200px; /* 桌面限制宽度 */
+  width: 100%;       /* 移动端自适应 */
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .header {
     text-align: center;
     margin-top: 5%;
     margin-bottom: 40px;
-    color: rgb(27, 214, 220);
+    color: rgb(106, 86, 215);
 }
 
 .header h1 {
-    font-size: 100px;
+    font-size: clamp(2rem, 8vw, 5rem);;
     margin-bottom: 10px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .header p {
-    font-size: 50px;
+    font-size: clamp(1rem, 5vw, 2.5rem);
     opacity: 0.9;
 }
 
@@ -58,10 +60,14 @@ body {
     .food-grid {
         grid-template-columns: 1fr;
     }
+    .back-button {
+    font-size: 1.2rem;
+    padding: 10px 18px;
+  }
 }
 
 .food-card {
-    background: rgb(241, 225, 163);
+    background: linear-gradient(135deg, #8dc9df 0%, #a1b0d9 50%, #99e8f5 100%);
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -98,13 +104,11 @@ body {
     margin-bottom: 20px;
 }
 
-/* Replace food-emoji with food-image */
+
 .food-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-right: 15px;
+    width: 100%;
+  max-width: 200px;
+  height: auto;
 }
 
 .food-image img {
@@ -115,11 +119,9 @@ body {
 
 
 .detail-image {
-    width: 800px;
-    height: 250px;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-right: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
 }
 
 .detail-image img {
@@ -133,6 +135,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; 
 }
 
 
@@ -276,7 +279,7 @@ body {
 }
 
 .detail-info h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 5rem);
     color: #333;
     margin-bottom: 15px;
 }
@@ -284,7 +287,7 @@ body {
 .detail-info p {
     color: #666;
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2.5rem);
 }
 
 .detail-location {
