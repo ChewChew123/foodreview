@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malaysian Street Food Guide</title>
+  <link rel="stylesheet" href="foodGuides&Searching.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🍜 Malaysian Street Food Guide</h1>
+      <p>Discover the rich flavors of Malaysia's authentic street cuisine</p>
+    </header>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="🔍 Search delicious food...">
+      <select id="regionFilter">
+        <option value="">All Regions</option>
+        <option value="Penang">Penang</option>
+        <option value="Kuala Lumpur">Kuala Lumpur</option>
+        <option value="Melaka">Melaka</option>
+        <option value="Johor">Johor</option>
+        <option value="Kelantan">Kelantan</option>
+        <option value="Selangor">Selangor</option>
+        <option value="Perak">Perak</option>
+        <option value="Terengganu">Terengganu</option>
+      </select>
+      <select id="typeFilter">
+        <option value="">All Types</option>
+        <option value="Rice">Rice</option>
+        <option value="Noodles">Noodles</option>
+        <option value="Snack">Snack</option>
+        <option value="Dessert">Dessert</option>
+        <option value="Drink">Drink</option>
+        <option value="Soup">Soup</option>
+        <option value="Bread">Bread</option>
+      </select>
+      <select id="ratingFilter">
+        <option value="">All Ratings</option>
+        <option value="5">5 stars</option>
+        <option value="4">4+ stars</option>
+        <option value="3">3+ stars</option>
+        <option value="2">2+ stars</option>
+        <option value="1">1+ star</option>
+      </select>
+      <button class="search-btn" id="searchBtn">Search</button>
+    </div>
+
+    <div id="foods"></div>
+  </div>
+
+   <script src="hearder-footer.js"></script>
+   <script src="foodGuides&Searching.js"></script>
+ 
+</body>
+</html>

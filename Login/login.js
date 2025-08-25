@@ -13,7 +13,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
   if (storedPassword === password) {
     alert("Login successful! Welcome, " + username);
-    window.location.href = "welcome.html";
+    window.location.href = "index.html";
   } else {
     alert("Wrong password!");
   }
