@@ -21,21 +21,31 @@ body {
 }
 
 .header {
-    text-align: center;
-    margin-top: 3%;
-    margin-bottom: 30px;
-    color: rgb(106, 86, 215);
+    backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: slideDown 0.8s ease-out;
+   
 }
 
 .header h1 {
     font-size: clamp(1.8rem, 6vw, 2.8rem);
     margin-bottom: 8px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(189, 169, 208, 0.3);
+    color: #af8af2;
+    
 }
 
 .header p {
     font-size: clamp(0.9rem, 4vw, 1.5rem);
     opacity: 0.9;
+    color: #5a6fd8;
 }
 
 .food-grid {
