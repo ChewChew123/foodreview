@@ -1,22 +1,124 @@
 // Force clear potentially existing old localStorage data
 function forceCleanOldData() {
-    const storageKeys = ['malaysiStreetFoods', 'streetFoods', 'malaysianFoodData']; // Possible key names
-    
+    const storageKeys = ['malaysiStreetFoods', 'streetFoods', 'malaysianFoodData'];
     storageKeys.forEach(key => {
         if (localStorage.getItem(key)) {
             console.log(`Found old data, clearing localStorage key: ${key}`);
             localStorage.removeItem(key);
         }
     });
-    
-    // You can also completely clear localStorage (if you're sure there's no other important data)
-    // localStorage.clear();
-    
     console.log('Old data cleanup completed');
 }
 
 // Execute cleanup immediately when page loads
 forceCleanOldData();
+
+// Helper to get current username
+function getCurrentUsername() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    return currentUser ? currentUser.username : null;
+}
+
+function getFavorites() {
+    const username = getCurrentUsername();
+    if (!username) {
+        return []; // No favorites for guest
+    }
+    const favoritesKey = `favorites_${username}`;
+    return JSON.parse(localStorage.getItem(favoritesKey)) || [];
+}
+
+function saveFavorites(favorites) {
+    const username = getCurrentUsername();
+    if (!username) {
+        return; // Cannot save for guest
+    }
+    const favoritesKey = `favorites_${username}`;
+    localStorage.setItem(favoritesKey, JSON.stringify(favorites));
+}
+
+function toggleFavorite() {
+    const username = getCurrentUsername();
+    if (!username) {
+        const returnUrl = encodeURIComponent(`FoodReview.html?id=${currentFood.id}`); // 添加 returnUrl 参数
+        alert("Please log in to add favorites!");
+        window.location.href = `Login.html?returnUrl=${returnUrl}`; // 使用 returnUrl 跳转
+        return;
+    }
+
+    if (!currentFood) return;
+
+    let favorites = getFavorites();
+    const favoriteIndex = favorites.findIndex(item => item.id === currentFood.id);
+
+    if (favoriteIndex > -1) {
+        favorites.splice(favoriteIndex, 1);
+        updateFavoriteButton(false);
+    } else {
+        const foodToAdd = {
+            id: currentFood.id,
+            name: currentFood.name,
+            image: currentFood.image,
+            description: currentFood.description,
+            location: currentFood.location,
+            type: "Food Review"
+        };
+        favorites.push(foodToAdd);
+        updateFavoriteButton(true);
+    }
+
+    saveFavorites(favorites);
+    window.dispatchEvent(new Event('storage'));
+}
+
+function updateFavoriteButton(isFavorited) {
+    const favoriteBtn = document.getElementById('favorite-btn');
+    if (isFavorited) {
+        favoriteBtn.innerHTML = '<i class="fas fa-heart"></i> Remove from Favorites';
+        favoriteBtn.style.color = '#ef4444';
+    } else {
+        favoriteBtn.innerHTML = '<i class="far fa-heart"></i> Add to Favorites';
+        favoriteBtn.style.color = '';
+    }
+}
+
+function checkIfFavorited() {
+    if (!currentFood) return;
+    const favorites = getFavorites();
+    const isFavorited = favorites.some(item => item.id === currentFood.id);
+    updateFavoriteButton(isFavorited);
+}
+
+// Add CSS styles for favorite button
+document.addEventListener('DOMContentLoaded', function() {
+    const style = document.createElement('style');
+    style.textContent = `
+        .favorite-btn {
+            background: none;
+            border: 1px solid #ef4444;
+            color: #ef4444;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+        }
+        .favorite-btn:hover {
+            background: #ef4444;
+            color: white;
+        }
+        .reviews-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    `;
+    document.head.appendChild(style);
+});
 
 // Street food data (automatically saved to localStorage)
 let streetFoods = [];
@@ -476,9 +578,8 @@ const defaultStreetFoods = [
 
 
 let currentFood = null;
-let currentRating = 5; // Default starts at 5 stars (more user-friendly default)
+let currentRating = 5;
 
-// localStorage data management
 function saveToLocalStorage() {
     try {
         localStorage.setItem('malaysiStreetFoods', JSON.stringify(streetFoods));
@@ -493,34 +594,26 @@ function loadFromLocalStorage() {
         const savedFoods = localStorage.getItem('malaysiStreetFoods');
         if (savedFoods) {
             const parsedFoods = JSON.parse(savedFoods);
-            
-            // Check if all default foods are included
             if (parsedFoods.length >= defaultStreetFoods.length) {
                 streetFoods = parsedFoods;
                 console.log('Successfully loaded data from localStorage');
                 return true;
             } else {
                 console.log('Incomplete localStorage data, using default data');
-                // Merge data: preserve user reviews but ensure all default foods exist
                 const mergedFoods = [...defaultStreetFoods];
-                
                 parsedFoods.forEach(savedFood => {
                     const existingIndex = mergedFoods.findIndex(f => f.id === savedFood.id);
                     if (existingIndex !== -1) {
-                        // Preserve user reviews but update other information
                         mergedFoods[existingIndex] = {
                             ...mergedFoods[existingIndex],
                             reviews: savedFood.reviews || mergedFoods[existingIndex].reviews
                         };
                     } else {
-                        // Add foods not in the default list
                         mergedFoods.push(savedFood);
                     }
                 });
-                
                 streetFoods = mergedFoods;
-                console.log(saveToLocalStorage);
-                saveToLocalStorage(); // Save merged data
+                saveToLocalStorage();
                 return true;
             }
         }
@@ -530,8 +623,6 @@ function loadFromLocalStorage() {
     return false;
 }
 
-
-
 function resetToDefault() {
     streetFoods = JSON.parse(JSON.stringify(defaultStreetFoods));
     saveToLocalStorage();
@@ -539,67 +630,43 @@ function resetToDefault() {
     alert('Data has been reset to default values');
 }
 
-// Calculate average rating (ensuring correct calculation)
 function calculateAverageRating(reviews) {
     if (!reviews || reviews.length === 0) return 0;
-    
-    const total = reviews.reduce((sum, review) => {
-        const rating = parseInt(review.rating) || 0;
-        return sum + rating;
-    }, 0);
-    
-    const average = total / reviews.length;
-    return average.toFixed(1);
+    const sum = reviews.reduce((acc, review) => acc + (parseInt(review.rating) || 0), 0);
+    return (sum / reviews.length).toFixed(1);
 }
 
-// Generate star HTML (completely fixed version)
-function generateStars(rating, isClickable = false) {
+function generateStars(rating, interactive = false) {
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5 ? 1 : 0;
     let starsHTML = '';
-    const numericRating = parseFloat(rating) || 0; // Ensure it's a number
-    const fullStars = Math.floor(numericRating);   // Number of full stars
-    const hasHalfStar = numericRating % 1 >= 0.5; // Whether there's a half star
-
     for (let i = 1; i <= 5; i++) {
-        let classes = "star";
         if (i <= fullStars) {
-            classes += " filled"; // Full star
-        } else if (i === fullStars + 1 && hasHalfStar) {
-            classes += " half";   // Half star
-        }
-
-        if (isClickable) {
-            starsHTML += `<span class="${classes} clickable" onclick="setRating(${i})" data-rating="${i}">★</span>`;
+            starsHTML += interactive 
+                ? `<span class="star filled" data-rating="${i}">&#9733;</span>`
+                : `<span class="star filled">&#9733;</span>`;
+        } else if (i === fullStars + 1 && halfStar) {
+            starsHTML += interactive 
+                ? `<span class="star half" data-rating="${i}">&#9733;</span>`
+                : `<span class="star half">&#9733;</span>`;
         } else {
-            starsHTML += `<span class="${classes}">★</span>`;
+            starsHTML += interactive 
+                ? `<span class="star" data-rating="${i}">&#9733;</span>`
+                : `<span class="star">&#9733;</span>`;
         }
     }
     return starsHTML;
 }
 
-// Sort by rating and render food cards (fixed rating display)
 function renderFoodGrid() {
-    console.log("=== Starting food grid rendering ===");
-    console.log("streetFoods array length:", streetFoods.length);
-    
-    // Recalculate average rating for each food then sort
-    const sortedFoods = [...streetFoods].sort((a, b) => {
-        const avgA = parseFloat(calculateAverageRating(a.reviews));
-        const avgB = parseFloat(calculateAverageRating(b.reviews));
-        return avgB - avgA;
-    });
-
-    console.log("Number of sorted foods:", sortedFoods.length);
-    
-    const gridHTML = sortedFoods.map((food, index) => {
-        console.log(`Processing food ${index + 1}: ${food.name} (ID: ${food.id})`);
+    const gridHTML = streetFoods.map(food => {
         const averageRating = parseFloat(calculateAverageRating(food.reviews));
         const totalReviews = food.reviews.length;
         const latestReview = food.reviews[0] || { comment: "No reviews yet" };
-        
         return `
             <div class="food-card" onclick="showDetailView(${food.id})">
                 <div class="food-header">
-                     <div class="food-image">
+                    <div class="food-image">
                         <img src="${food.image}" alt="${food.name}">
                     </div>
                     <div class="rating-section">
@@ -609,15 +676,12 @@ function renderFoodGrid() {
                         <div class="review-count">${totalReviews} reviews</div>
                     </div>
                 </div>
-                
                 <div class="food-name">${food.name}</div>
                 <div class="food-description">${food.description}</div>
-                
                 <div class="food-location">
                     <span class="location-icon">📍</span>
-                    ${food.location}
+                    ${food.location || 'No location provided'}
                 </div>
-                
                 <div class="latest-review">
                     <div class="latest-review-label">Latest review:</div>
                     <div class="latest-review-text">"${latestReview.comment}"</div>
@@ -629,7 +693,6 @@ function renderFoodGrid() {
     console.log("Generated HTML string length:", gridHTML.length);
     document.getElementById('food-grid').innerHTML = gridHTML;
     
-    // Check actual number of rendered cards
     setTimeout(() => {
         const renderedCards = document.querySelectorAll('.food-card').length;
         console.log("Actual number of rendered food cards:", renderedCards);
@@ -637,18 +700,15 @@ function renderFoodGrid() {
     }, 100);
 }
 
-// Show detail view (fixed rating display)
 function showDetailView(foodId) {
     currentFood = streetFoods.find(food => food.id === foodId);
     if (!currentFood) return;
 
-    // Recalculate current food's average rating
     const averageRating = parseFloat(calculateAverageRating(currentFood.reviews));
     const totalReviews = currentFood.reviews.length;
 
-    // Render detail view header
     const headerHTML = `
-       <div class="detail-image">
+        <div class="detail-image">
             <img src="${currentFood.image}" alt="${currentFood.name}">
         </div>
         <div class="detail-info">
@@ -656,7 +716,7 @@ function showDetailView(foodId) {
             <p>${currentFood.description}</p>
             <div class="detail-location">
                 <span style="margin-right: 8px;">📍</span>
-                ${currentFood.location}
+                ${currentFood.location || 'No location provided'}
             </div>
             <div class="detail-rating">
                 <div class="stars">
@@ -670,27 +730,22 @@ function showDetailView(foodId) {
     document.getElementById('detail-header').innerHTML = headerHTML;
     renderReviews();
 
-    // Switch view
     document.getElementById('main-view').style.display = 'none';
     document.getElementById('detail-view').classList.add('active');
+
+    checkIfFavorited();
 }
 
-// Show main view
 function showMainView() {
     document.getElementById('main-view').style.display = 'block';
     document.getElementById('detail-view').classList.remove('active');
     document.getElementById('review-form').classList.remove('active');
-
-    // ✅ Re-render grid when returning to main view
     renderFoodGrid();
 }
 
-// Render reviews list (fixed personal review star display)
 function renderReviews() {
     const reviewsHTML = currentFood.reviews.map(review => {
-        // Ensure rating is a number type
         const userRating = parseInt(review.rating) || 5;
-        
         return `
             <div class="review-item">
                 <div class="review-header">
@@ -715,39 +770,41 @@ function renderReviews() {
     document.getElementById('reviews-list').innerHTML = reviewsHTML;
 }
 
-// Toggle review form (updated version, correctly initializes stars)
 function toggleReviewForm() {
     const form = document.getElementById('review-form');
     form.classList.toggle('active');
     if (!form.classList.contains('active')) {
-        // Reset form
         document.getElementById('reviewer-name').value = '';
         document.getElementById('review-comment').value = '';
-        setRating(5); // Reset to 5 stars (more user-friendly default)
+        setRating(5);
     } else {
-        // When form opens, initialize stars and set to 5 stars
         initializeRatingStars();
         setRating(5);
-        // Focus on username input
         setTimeout(() => {
             document.getElementById('reviewer-name').focus();
         }, 100);
     }
 }
 
-// New function: Initialize rating stars
 function initializeRatingStars() {
     const starsContainer = document.getElementById('rating-stars');
     if (starsContainer) {
         starsContainer.innerHTML = generateStars(5, true);
+        const stars = starsContainer.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = parseInt(star.getAttribute('data-rating'));
+                setRating(rating);
+            });
+        });
+    } else {
+        console.error('Rating stars container not found');
     }
 }
 
-// Set rating (improved version, correctly handles star states)
 function setRating(rating) {
-    currentRating = parseInt(rating); // Always integer 1-5
+    currentRating = parseInt(rating);
     const stars = document.querySelectorAll('#rating-stars .star');
-    
     stars.forEach(star => {
         const starRating = parseInt(star.getAttribute('data-rating'));
         star.classList.remove('filled');
@@ -755,11 +812,9 @@ function setRating(rating) {
             star.classList.add('filled');
         }
     });
-
     console.log(`Rating set to: ${currentRating} stars`);
 }
 
-// Submit review (ensure rating is correctly saved)
 function submitReview() {
     const name = document.getElementById('reviewer-name').value.trim();
     const comment = document.getElementById('review-comment').value.trim();
@@ -776,41 +831,28 @@ function submitReview() {
 
     const newReview = {
         user: name,
-        rating: parseInt(currentRating), // Ensure saved as integer
+        rating: parseInt(currentRating),
         comment: comment,
-        time: "Just now" // Simplified time display
+        time: "Just now"
     };
 
-    // Add new review to the beginning of current food's reviews
     currentFood.reviews.unshift(newReview);
 
-    // Update corresponding food in streetFoods array
     const foodIndex = streetFoods.findIndex(food => food.id === currentFood.id);
     if (foodIndex !== -1) {
         streetFoods[foodIndex] = { ...currentFood };
     }
 
-    // Auto-save to localStorage
     saveToLocalStorage();
-
-    // Recalculate and update detail view's average rating display
     updateDetailViewRating();
-
-    // Re-render reviews list
     renderReviews();
-    
-    // Close review form
     toggleReviewForm();
-    
-    // Update main grid (re-sort and show new average rating)
     renderFoodGrid();
 }
 
-// New function: Update detail view's rating display
 function updateDetailViewRating() {
     const averageRating = parseFloat(calculateAverageRating(currentFood.reviews));
     const totalReviews = currentFood.reviews.length;
-    
     const ratingElement = document.querySelector('.detail-rating');
     if (ratingElement) {
         ratingElement.innerHTML = `
@@ -822,32 +864,42 @@ function updateDetailViewRating() {
     }
 }
 
-// Initialize page (updated version, correctly initializes all functionality)
 document.addEventListener('DOMContentLoaded', function() {
-    // Try to load data from localStorage, if not found use default data
     if (!loadFromLocalStorage()) {
         console.log('No saved data found, using default data');
         streetFoods = JSON.parse(JSON.stringify(defaultStreetFoods));
         saveToLocalStorage();
     }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const foodId = urlParams.get('id');
     
-    renderFoodGrid();
+    if (foodId) {
+        console.log(`URL parameter id: ${foodId}`);
+        const id = isNaN(foodId) ? foodId : parseInt(foodId);
+        const foundFood = streetFoods.find(food => food.id === id);
+        if (foundFood) {
+            console.log(`Found food: ${foundFood.name} (id: ${id})`);
+            showDetailView(id);
+        } else {
+            console.log(`Food with id ${id} not found, rendering grid`);
+            renderFoodGrid();
+        }
+    } else {
+        console.log('No id parameter, rendering food grid');
+        renderFoodGrid();
+    }
     
-    // Initialize rating stars
     initializeRatingStars();
-    setRating(5); // Default set to 5 stars
+    setRating(5);
     
-    // Add keyboard shortcut support
     document.addEventListener('keydown', function(event) {
-        // If review form is open, support number keys 1-5 to set rating
         if (document.getElementById('review-form').classList.contains('active')) {
             if (event.key >= '1' && event.key <= '5') {
                 setRating(parseInt(event.key));
                 event.preventDefault();
             }
         }
-        
-        // ESC键关闭评价表单或返回主页
         if (event.key === 'Escape') {
             if (document.getElementById('review-form').classList.contains('active')) {
                 toggleReviewForm();
@@ -858,10 +910,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     console.log('Malaysian Street Food Rating System initialized');
-console.log('Shortcuts: Number keys 1-5 to set rating, ESC key to return/close');
+    console.log('Shortcuts: Number keys 1-5 to set rating, ESC key to return/close');
 });
 
-// Add reset data function (for debugging)
 function addResetButton() {
     const resetBtn = document.createElement('button');
     resetBtn.textContent = 'Reset Data';
@@ -886,7 +937,6 @@ function addResetButton() {
     document.body.appendChild(resetBtn);
 }
 
-// Debug function: Check data integrity
 function debugCheckData() {
     console.log('=== Data Integrity Check ===');
     streetFoods.forEach(food => {
@@ -898,7 +948,3 @@ function debugCheckData() {
         console.log('---');
     });
 }
-
-// Uncomment the following lines to show reset button and enable debugging (for development/debugging)
-// addResetButton()
-// console.log('Debug mode enabled. Enter debugCheckData() to inspect data');

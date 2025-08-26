@@ -51,8 +51,37 @@
     <div id="foods"></div>
   </div>
 
-   <script src="hearder-footer.js"></script>
-   <script src="foodGuides&Searching.js"></script>
- 
+  <div id="detail-view" class="detail-view">
+    <button id="back-btn" class="back-button">← Return back</button>
+    <div class="detail-card">
+      <div id="detail-header" class="detail-header">
+        <div class="detail-image">
+          <img id="detail-img" src="" alt="">
+        </div>
+        <div class="detail-info">
+          <h1 id="detail-name"></h1>
+          <p id="detail-description"></p>
+          <div id="detail-location" class="detail-location">
+            <span class="location-icon">📍</span>
+            <span id="detail-area"></span>
+          </div>
+          <div class="detail-rating">
+            <div id="detail-stars" class="stars"></div>
+            <span id="detail-rating-text"></span>
+          </div>
+          <div class="detail-type">
+            <span class="food-type" id="detail-type"></span>
+          </div>
+          <button id="favorite-btn" class="favorite-btn" title="Save to Favorites">
+            <span class="heart-icon">♡</span> Save to Favorites
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="hearder-footer.js"></script>
+  <script src="foodGuides&Searching.js"></script>
+  <p class="sour">All image from istockphoto.com</p>
 </body>
 </html>

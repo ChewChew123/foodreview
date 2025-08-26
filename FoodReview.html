@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Malaysian Street Food Reviews</title>
     <link rel="stylesheet" href="foodReview.css">
+    <!-- 添加 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -30,7 +32,12 @@
                 <div class="reviews-section">
                     <div class="reviews-header">
                         <h2 class="reviews-title">User reviews</h2>
-                        <button class="add-review-btn" onclick="toggleReviewForm()">Write a review</button>
+                        <div>
+                            <button id="favorite-btn" class="favorite-btn" onclick="toggleFavorite()">
+                                <i class="far fa-heart"></i> Add to Favorites
+                            </button>
+                            <button class="add-review-btn" onclick="toggleReviewForm()">Write a review</button>
+                        </div>
                     </div>
 
                     <div class="review-form" id="review-form">

@@ -5,59 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favorites</title>
-    <script src="hearder-footer.js"></script>
     <link rel="stylesheet" href="css/profilefavorite.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
-<body class="bg-gray-50">
-    <main class="container mx-auto px-4 py-6">
-        <div class="profile-section">
-    <h2 class="profile-title">Profile</h2>
-    <div class="profile-avatar-container">
-        <div id="profile-avatar" class="avatar-placeholder">G</div>
-        <button id="toggle-avatar-btn" class="edit-btn">✏️</button>
-        <div id="avatar-popover" class="avatar-edit-popup">
-            <input type="file" id="edit-avatar" accept="image/*">
-            <button onclick="saveAvatar()">Save</button>
-            <button class="cancel-btn" onclick="closeAllPopovers()">Cancel</button>
-        </div>
-    </div>
-    <div class="profile-username-container">
-        <p id="profile-username">Guest</p>
-        <button id="toggle-username-btn" class="edit-btn">✏️</button>
-        <div id="username-popover" class="username-edit-popup">
-            <input type="text" id="edit-username" class="username-input">
-            <button onclick="saveUsername()">Save</button>
-            <button class="cancel-btn" onclick="closeAllPopovers()">Cancel</button>
-        </div>
-    </div>
-    <button id="login-logout-btn" class="logout-btn">Log Out</button>
-</div>
-
-        <div class="suggestions-section mb-6">
-            <h2 class="text-lg font-semibold text-gray-900 mb-4">Your Favourite</h2>
-            <div class="suggestions-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Suggestions will be loaded here -->
+<body>
+    <main class="page-layout">
+        <div class="sidebar">
+            <div class="profile-section">
+                <h2 class="profile-title">Profile</h2>
+                <div class="profile-avatar-container">
+                    <div id="profile-avatar" class="avatar-placeholder">G</div>
+                    <button id="toggle-avatar-btn" class="edit-btn">✏️</button>
+                    <div id="avatar-popover" class="avatar-edit-popup hidden">
+                        <input type="file" id="edit-avatar" accept="image/*">
+                        <div class="popup-actions">
+                            <button onclick="saveAvatar()">Save</button>
+                            <button class="cancel-btn" onclick="closeAllPopovers()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-username-container">
+                    <p id="profile-username">Guest</p>
+                    <button id="toggle-username-btn" class="edit-btn">✏️</button>
+                    <div id="username-popover" class="username-edit-popup hidden">
+                        <input type="text" id="edit-username" class="username-input">
+                        <div class="popup-actions">
+                            <button onclick="saveUsername()">Save</button>
+                            <button class="cancel-btn" onclick="closeAllPopovers()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="login-logout-btn" class="logout-btn">Log Out</button>
+            </div>
+            
+            <div class="suggestions-section">
+                <h2 class="suggestions-title">Recommendations</h2>
+                <div id="recommendation-list"></div>
             </div>
         </div>
 
         <div class="favorites-section">
-            <div class="flex justify-between items-center mb-4">
-                <select id="sort-by" class="sort-dropdown p-2 border border-gray-300 rounded">
-                    <option>All</option>
-                    <option>Recipes</option>
-                    <option>Guides</option>
-                    <option>Places</option>
+            <div class="favorites-header">
+                <h2 class="favorites-title">Your Favourite</h2>
+                <select id="sort-by" class="sort-dropdown">
+                    <option value="All">All</option>
+                    <option value="Recipes">Recipes</option>
+                    <option value="Guides">Guides</option>
+                    <option value="Food Review">Food Review</option>
                 </select>
             </div>
-            <div id="favorites-list" class="favorites-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Favorites will be loaded here -->
-            </div>
+            <div id="favorites-list" class="favorites-list"></div>
         </div>
     </main>
 
+    <script src="js/profile.js"></script>
+    <script src="js/recipes_data.js"></script>
     <script src="js/favorites.js"></script>
-     <script src="js/profile.js"></script>
+    <script src="foodGuides&Searching.js"></script>
+    <script src="js/recommendation.js"></script>
+    <script src="hearder-footer.js"></script>
+    
 </body>
 
 </html>

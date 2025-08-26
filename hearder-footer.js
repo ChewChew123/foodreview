@@ -226,8 +226,13 @@ function insertFooter() {
         </footer>
     `;
     
-    document.body.insertAdjacentHTML("beforeend", footerHTML);
+ const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = footerHTML.trim();
+    const footerElement = tempDiv.firstChild;
+
+    document.body.appendChild(footerElement); 
 }
+
 
 function initCookieConsent() {
     // Check if consent already given

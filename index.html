@@ -1,149 +1,77 @@
 <!DOCTYPE html>
+
 <html lang="en"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Street Food MY – Explore Malaysian Street Food</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<link href="assets/css/styles.css" rel="stylesheet">
-</head>
-<body class="bg-overlay">
-<nav class="navbar navbar-expand-lg bg-transparent">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center gap-2 text-white" href="index.html"><img src="image/logo.png" height="40" alt="logo"><strong>Street Food MY</strong></a>
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="bi bi-list fs-2"></i>
-    </button>
-    <div id="nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="foodGuides&Searching.html">Food Guides</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="recipes.html">Recipes</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="FoodReview.html">Reviews & Ranking</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="map.html">Food Map</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="AboutUs.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="Login.html">User Login</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="favourite.html">Profile & My Favourite</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<style>.source { font-size: 0.85em; color: black; font-style: normal; margin-top: 4px; text-decoration: none; }</style></head>
+<body class="bg-overlay"><!-- Header will be injected by hearder-footer.js -->
 <header class="hero">
-  <div class="content">
-    <div class="mb-3"><img src="image/logo.png" alt="Street Food MY" height="64"></div>
-    <h1 class="display-4 fw-bold">Find Malaysia’s Best Street Food</h1>
-    <p class="lead mx-auto" style="max-width:850px">From century-old night markets to hidden lane hawkers, Malaysian street food is a living archive of Malay, Chinese, Indian and Nusantara flavours. We collect stories, organise practical guides, and map stalls across the country so you can plan your next makan trail with confidence.</p>
-  </div>
+<div class="content">
+<div class="mb-3"><img alt="Street Food MY" src="image/logo.png" class="logo-img"/></div>
+<h1 class="display-4 fw-bold">Find Malaysia’s Best Street Food</h1>
+<p class="lead mx-auto" style="max-width:850px">From century-old night markets to hidden lane hawkers, Malaysian street food is a living archive of Malay, Chinese, Indian and Nusantara flavours. We collect stories, organise practical guides, and map stalls across the country so you can plan your next makan trail with confidence.</p>
+</div>
 </header>
-
 <main class="container pb-5">
-  <section class="pb-4">
-    <div class="row g-4">
-      <div class="col-lg-8">
-        <a href="guides.html" class="position-relative d-block">
-          <img src="image/food_guides.jpg" class="img-fluid rounded shadow" alt="Food Guides">
-          <span class="position-absolute top-50 start-50 translate-middle px-3 py-2 bg-dark text-white fw-bold rounded">FOOD GUIDES</span>
-        </a>
-        <p class="mt-2 caption">Deep dives into regional specialties, where to eat them, price tips, opening hours, and the stories of the hawkers who keep traditions alive.</p>
-      </div>
-      <div class="col-lg-4">
-        <div class="d-grid gap-4">
-          <a href="review.html" class="position-relative d-block">
-            <img src="image/reviews.jpg" class="img-fluid rounded shadow" alt="Reviews & Ranking">
-            <span class="position-absolute top-50 start-50 translate-middle px-3 py-2 bg-dark text-white fw-bold rounded">REVIEWS & RANKING</span>
-          </a>
-          <p class="mt-2 caption">Crowd‑powered reviews, student‑friendly picks, and a simple ranking to help you decide what’s worth the queue.</p>
-          <a href="recipes.html" class="position-relative d-block">
-            <img src="image/recipes.jpg" class="img-fluid rounded shadow" alt="Recipes">
-            <span class="position-absolute top-50 start-50 translate-middle px-3 py-2 bg-dark text-white fw-bold rounded">RECIPES</span>
-          </a>
-          <p class="mt-2 caption">Step‑by‑step recipes, pantry swaps for students, and video tutorials so you can recreate hawker flavours in your own kitchen.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="py-4 bg-transparent">
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-      <h2 class="section-title h4"><i class="bi bi-camera-video"></i> Street Food Video</h2>
-      <span class="text-light small">Curated by Street Food MY</span>
-    </div>
-    <div class="video-wrapper rounded-3 shadow">
-      <iframe src="https://www.youtube.com/embed/rakfl1KCaMk?si=pHK9ZkQCAjQ85xAF"
-              title="Street Food Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section class="py-4">
-    <div class="row g-3 align-items-center">
-      <div class="col-lg-7">
-        <h3 class="h4">Get new spots weekly</h3>
-        <p class="mb-0">Join the list and never miss a new stall. We share student deals, halal-friendly options, and late-night eats.</p>
-      </div>
-      <div class="col-lg-5">
-        <form class="d-flex gap-2" onsubmit="event.preventDefault(); localStorage.setItem('sb_news_email', this.email.value); this.reset(); alert('Thanks! We will ping you soon.');">
-          <input name="email" type="email" class="form-control form-control-lg" placeholder="Your email" required>
-          <button class="btn btn-light btn-lg"><i class="bi bi-send"></i> Subscribe</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <div id="cookie-consent" class="position-fixed bottom-0 start-0 end-0 p-3 text-center" style="z-index:2000;">
-    <div class="d-inline-flex align-items-center gap-2 p-2 px-3 rounded-pill" style="background: rgba(255,255,255,.1); backdrop-filter: blur(6px); border:1px solid rgba(255,255,255,.25);">
-      <span class="text-white">We use cookies to improve your experience.</span>
-      <button class="btn btn-sm btn-light" onclick="document.cookie='consent=yes;path=/;max-age=31536000'; this.closest('#cookie-consent').remove()">Accept</button>
-    </div>
-  </div>
-
-  <section class="pt-2 pb-5">
-    <div class="row g-3">
-      <div class="col-md-6">
-        <a href="about.html" class="btn w-100 btn-dark py-3 fw-bold">ABOUT US</a>
-        <p class="small caption mt-1">Why we built Street Food MY, how we curate stalls, and how you can contribute photos, tips, and corrections.</p>
-      </div>
-      <div class="col-md-6">
-        <a href="profile.html" class="btn w-100 btn-dark py-3 fw-bold">PROFILE & MY FAVOURITE</a>
-        <p class="small caption mt-1">Log in to track places you’ve tried, build your hit list for the next food hunt, and sync favourites across devices.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-5">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-6">
-        <img src="image/malaysian-street-food-culture-1024x500.webp" class="img-fluid rounded shadow" alt="Malaysian street food culture">
-      </div>
-      <div class="col-lg-6">
-        <h2 class="h3 fw-bold">A Short History of Malaysian Street Food</h2>
-        <p class="mb-2">Malaysia’s street food culture grew at the crossroads of the Malay Archipelago, the Straits of Malacca trade routes, and waves of migration from China, India and the Middle East. Hawkers adapted home recipes into affordable dishes served from pushcarts and kopitiams, then into modern night markets and hawker centres.</p>
-        <p class="mb-2">From <em>nasi lemak</em> wrapped in banana leaf, Hokkien-style <em>char kuey teow</em>, to mamak staples like <em>roti canai</em> and teh tarik, each plate carries layered influences. After independence, local councils began licensing hawkers and concentrating stalls into dedicated areas—think Jalan Alor (KL), Gurney Drive (Penang) and Jonker Street (Melaka)—preserving heritage while improving hygiene and convenience.</p>
-        <p class="mb-0">Today, street food remains a social glue: quick breakfasts at the market, late‑night suppers after tarawih, and weekend food hunts. Our map helps you explore this living history—stall by stall.</p>
-      </div>
-    </div>
-  </section>
-
+<section class="pb-4">
+<div class="row g-4">
+<div class="col-lg-8">
+<a class="position-relative d-block" href="foodGuides&Searching.html">
+<img alt="Food Guides" class="img-fluid rounded shadow" src="image/food_guides.jpg"/><p class="source">This image from Genspark</p><span class="position-absolute top-50 start-50 translate-middle px-3 py-2 bg-dark text-white fw-bold rounded">FOOD GUIDES</span>
+</a>
+<p class="mt-2 caption">Deep dives into regional specialties, where to eat them, price tips, opening hours, and the stories of the hawkers who keep traditions alive.</p>
+</div>
+<div class="col-lg-4">
+<div class="d-grid gap-4">
+<a class="position-relative d-block" href="FoodReview.html">
+<img alt="Reviews &amp; Ranking" class="img-fluid rounded shadow" src="image/reviews.jpg"/><p class="source">This image from AstroBIZ</p><span class="position-absolute top-50 start-50 translate-middle px-3 py-2 bg-dark text-white fw-bold rounded">REVIEWS &amp; RANKING</span>
+</a>
+<p class="mt-2 caption">Crowd‑powered reviews, student‑friendly picks, and a simple ranking to help you decide what’s worth the queue.</p>
+<a class="position-relative d-block" href="recipes.html">
+<img alt="Recipes" class="img-fluid rounded shadow" src="image/recipes.jpg"/><p class="source">This image from SeriousEats</p><span class="position-absolute top-50 start-50 translate-middle px-3 py-2 bg-dark text-white fw-bold rounded">RECIPES</span>
+</a>
+<p class="mt-2 caption">Step‑by‑step recipes, pantry swaps for students, and video tutorials so you can recreate hawker flavours in your own kitchen.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-4 bg-transparent">
+<div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+<h2 class="section-title h4"><i class="bi bi-camera-video"></i> Street Food Video</h2>
+<span class="text-light small">Curated by Street Food MY</span>
+</div>
+<div class="video-wrapper rounded-3 shadow">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rakfl1KCaMk?si=pHK9ZkQCAjQ85xAF" title="Street Food Video"></iframe>
+</div>
+</section>
+<section class="pt-2 pb-5">
+<div class="row g-3">
+<div class="col-md-6">
+<a class="btn w-100 btn-dark py-3 fw-bold" href="AboutUs.html">ABOUT US</a>
+<p class="small caption mt-1">Why we built Street Food MY, how we curate stalls, and how you can contribute photos, tips, and corrections.</p>
+</div>
+<div class="col-md-6">
+<a class="btn w-100 btn-dark py-3 fw-bold" href="favourite.html">PROFILE &amp; MY FAVOURITE</a>
+<p class="small caption mt-1">Log in to track places you’ve tried, build your hit list for the next food hunt, and sync favourites across devices.</p>
+</div>
+</div>
+</section>
+<section class="py-5">
+<div class="row g-4 align-items-center">
+<div class="col-lg-6">
+<img alt="Malaysian street food culture" class="img-fluid rounded shadow" src="image/malaysian-street-food-culture-1024x500.webp"/><p class="source">This image from Ifeng</p></div>
+<div class="col-lg-6">
+<h2 class="h3 fw-bold">A Short History of Malaysian Street Food</h2>
+<p class="mb-2">Malaysia’s street food culture grew at the crossroads of the Malay Archipelago, the Straits of Malacca trade routes, and waves of migration from China, India and the Middle East. Hawkers adapted home recipes into affordable dishes served from pushcarts and kopitiams, then into modern night markets and hawker centres.</p>
+<p class="mb-2">From <em>nasi lemak</em> wrapped in banana leaf, Hokkien-style <em>char kuey teow</em>, to mamak staples like <em>roti canai</em> and teh tarik, each plate carries layered influences. After independence, local councils began licensing hawkers and concentrating stalls into dedicated areas—think Jalan Alor (KL), Gurney Drive (Penang) and Jonker Street (Melaka)—preserving heritage while improving hygiene and convenience.</p>
+<p class="mb-0">Today, street food remains a social glue: quick breakfasts at the market, late‑night suppers after tarawih, and weekend food hunts. Our map helps you explore this living history—stall by stall.</p>
+</div>
+</div>
+</section>
 </main>
-
-
-  
-  <footer class="text-center text-white py-4" style="background:linear-gradient(135deg,#a18cd1 0%, #fbc2eb 100%)">
-    <p class="mb-2 fw-semibold">Click the IG Twitter Facebook if you want to know more !</p>
-    <div class="d-flex justify-content-center gap-4 mb-2">
-      <a href="https://www.instagram.com" target="_blank" class="text-white fs-3"><i class="bi bi-instagram"></i></a>
-      <a href="https://twitter.com" target="_blank" class="text-white fs-3"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.facebook.com" target="_blank" class="text-white fs-3"><i class="bi bi-facebook"></i></a>
-    </div>
-    <hr class="opacity-25" style="max-width:95%; margin: .5rem auto 1rem;">
-    <p class="mb-1">© 2025 Street Food MY. All rights reserved.</p>
-    <p class="mb-0">Follow us on social media for the latest updates! 🍴✨</p>
-  </footer>
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
-</body></html>
+<script defer="True" src="hearder-footer.js"></script><!-- Footer & Cookie consent injected by hearder-footer.js --></body></html>
